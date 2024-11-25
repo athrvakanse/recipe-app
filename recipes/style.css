@@ -2,16 +2,26 @@
     background: lightgoldenrodyellow;
     border: solid black .5px;
     border-radius: 4px;
-  }
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
 
 .dish-title, .dish-img {
     text-align: center;
 }
 
 .dish-desc, .dish-ingredients, .dish-directions {
+    display: inline;
+    box-sizing: border-box;
+    margin: 0px 14px 0px 14px;
     padding: 14px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
+    min-width: 20vh;
+    min-height: auto;
+    width: 25rem;
+    text-align: justify;
 }
 
 .dish-title {
@@ -24,4 +34,17 @@
     border-radius: 4px;
     border: 2px solid #8080807d;
     padding: 4px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 360px) and (max-width: 820px) {
+    .dish-desc, .dish-ingredients, .dish-directions {
+        min-width: none;
+        width: auto;
+    }
+    
+    .dish-img img {
+        width: 330px;
+        height: auto;
+    }
 }
